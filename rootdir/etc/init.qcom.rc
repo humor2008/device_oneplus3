@@ -1395,6 +1395,12 @@ service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
 
 on property:sys.boot_completed=1
     start cs-post-boot
+    stop netmgrd
+    stop ril-daemon
+    stop ril-daemon2
+    start ril-daemon
+    start ril-daemon2
+    start netmgrd
 
 on property:sys.dbg.coresight.enable=1
     write /persist/coresight/enable 1
@@ -1412,3 +1418,6 @@ service seemp_healthd /system/vendor/bin/seemp_healthd
     class late_start
     user system
     group system
+
+
+
