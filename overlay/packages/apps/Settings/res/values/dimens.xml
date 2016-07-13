@@ -10,7 +10,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
     <dimen name="fingerprint_dot_radius">5dp</dimen>
     <item name="fingerprint_sensor_location_fraction_y" type="fraction">94.68%</item>
